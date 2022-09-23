@@ -1,0 +1,42 @@
+.entrada {
+  border-left: #03b898 5px solid;
+}
+
+.saida {
+  border-left: #cc0606 5px solid;
+}
+
+.valorEntradaSaida {
+  color: #8a8989;
+}
+
+.deletButton svg {
+  color: black;
+  width: 100%;
+  width: 16px;
+  height: 16px;
+}
+
+.deletButton {
+  margin: auto;
+}
+
+.Valor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_lixeira {
+  position: absolute;
+  left: 20rem;
+}
+
+li {
+  display: flex;
+  gap: 4rem;
+  margin-top: 1rem;
+  padding: 0.4rem;
+  border-radius: 4px;
+  align-items: center;
+  position: relative;
+}

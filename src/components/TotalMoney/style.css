@@ -1,0 +1,23 @@
+.bg_TotalMoney {
+  color: #000000;
+  margin-top: 1rem;
+}
+
+.display_justify{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.corSpanTexto{
+color: #8a8989;
+}
+
+.valorTotal {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.valorQuantia {
+  color: #fd377e;
+}

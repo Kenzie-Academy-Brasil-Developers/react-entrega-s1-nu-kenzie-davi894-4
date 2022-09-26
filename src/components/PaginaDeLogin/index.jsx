@@ -15,7 +15,7 @@ const PaginaDeLogin = ({ setIsLoggedIn, isLoggedIn }) => {
           </h1>
 
           <div className="descricaoPaginaLogin">
-            <h2> centralize o controle de suas finanças</h2>
+            <h2> Centralize o controle de suas finanças</h2>
           </div>
           <h3> de forma rápida e segura</h3>
 

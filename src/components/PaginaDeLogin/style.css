@@ -1,0 +1,79 @@
+* {
+  outline: 1px solid red;
+}
+
+.Nu {
+  color: #fd377e;
+}
+
+.displayFlexLogar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.sectionDisplayFlexLogar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PaginaDeLogar {
+  width: 100%;
+}
+
+.h1PaginaLogin {
+  margin-left: 0.5rem;
+  color: aliceblue;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: aliceblue;
+}
+
+h2 {
+  color: aliceblue;
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 48px;
+  width: 19rem;
+  margin: 0 auto;
+}
+
+.descricaoPaginaLogin {
+  width: 307px;
+  margin: 0 auto;
+}
+
+.iniciar {
+  width: 241px;
+  height: 48px;
+  border-radius: 8px;
+  padding: 13px, 20px, 13px, 20px;
+  gap: 10px;
+  margin: 0;
+  top: 490px;
+  left: 256px;
+  background-color: #fd377e;
+  color: aliceblue;
+}
+
+@media (max-width: 944px) {
+  .sectionDisplayFlexLogar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .PaginaDeLogar {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

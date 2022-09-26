@@ -4,19 +4,29 @@ import { useState } from "react";
 function Form({ setListTransactions }) {
   const [descricao, setDescricao] = useState("");
   const [valor, setValor] = useState("");
-  const [tipo, setTipo] = useState("");
+  const [tipo, setTipo] = useState("entrada");
 
   function handleTransactions(event) {
     event.preventDefault();
+
+    if (tipo === "saída") {
+      const objTransacao = {
+        description: descricao,
+        type: tipo,
+        value: parseInt(valor) * -1,
+      };
+      return setListTransactions((enviarTrasacao) => [
+        ...enviarTrasacao,
+        objTransacao,
+      ]);
+    }
 
     const objTransacao = {
       description: descricao,
       type: tipo,
       value: parseInt(valor),
     };
-
     setListTransactions((enviarTrasacao) => [...enviarTrasacao, objTransacao]);
-    
   }
 
   return (
@@ -43,8 +53,7 @@ function Form({ setListTransactions }) {
         <div className="tipoValor">
           <label htmlFor="">Tipo de valor</label>
           <select
-            name=""
-            id=""
+            value={tipo}
             onChange={(event) => setTipo(event.target.value)}
             className="input_select"
             required

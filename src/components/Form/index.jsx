@@ -9,7 +9,7 @@ function Form({ setListTransactions }) {
   function handleTransactions(event) {
     event.preventDefault();
 
-    if (tipo === "saída") {
+    if (tipo === "saída" && valor > 0) {
       const objTransacao = {
         description: descricao,
         type: tipo,
@@ -19,14 +19,39 @@ function Form({ setListTransactions }) {
         ...enviarTrasacao,
         objTransacao,
       ]);
+    } else if (tipo === "saída" && valor < 0) {
+      const objTransacao = {
+        description: descricao,
+        type: tipo,
+        value: parseInt(valor) ,
+      };
+      return setListTransactions((enviarTrasacao) => [
+        ...enviarTrasacao,
+        objTransacao,
+      ]);
     }
 
-    const objTransacao = {
-      description: descricao,
-      type: tipo,
-      value: parseInt(valor),
-    };
-    setListTransactions((enviarTrasacao) => [...enviarTrasacao, objTransacao]);
+    if (tipo === "entrada" && valor < 0) {
+      const objTransacao = {
+        description: descricao,
+        type: tipo,
+        value: parseInt(valor) * -1,
+      };
+      setListTransactions((enviarTrasacao) => [
+        ...enviarTrasacao,
+        objTransacao,
+      ]);
+    } else if (tipo === "entrada" && valor > 0) {
+      const objTransacao = {
+        description: descricao,
+        type: tipo,
+        value: parseInt(valor),
+      };
+      setListTransactions((enviarTrasacao) => [
+        ...enviarTrasacao,
+        objTransacao,
+      ]);
+    }
   }
 
   return (

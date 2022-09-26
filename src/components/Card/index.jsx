@@ -6,7 +6,7 @@ function Card({ transaction, key, listTransactions, setListTransactions }) {
   console.log(transaction);
   function removerTrasacao(description) {
     setListTransactions(
-      listTransactions.filter((elem) => elem.description !== description)
+      listTransactions.filter((elem) => elem !== description)
     );
   }
   
@@ -26,7 +26,7 @@ function Card({ transaction, key, listTransactions, setListTransactions }) {
           <div className="btn_lixeira">
             <button
               className="deletButton"
-              onClick={() => removerTrasacao(transaction.description)}
+              onClick={() => removerTrasacao(transaction)}
             >
               <SvgLixeira value={key} />
             </button>
@@ -44,7 +44,7 @@ function Card({ transaction, key, listTransactions, setListTransactions }) {
           <div className="btn_lixeira">
             <button
               className="deletButton"
-              onClick={() => removerTrasacao(transaction.description)}
+              onClick={() => removerTrasacao(transaction)}
             >
               <SvgLixeira value={key} />
             </button>
